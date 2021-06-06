@@ -8,16 +8,16 @@ import loggedInPage from './loggedInPage';
 
 const AppReducer = () => {
   return(
-    <StateProvider>
-      <Router>
-        <Switch>
-          <Route path="/signin" name="サインイン" exact component={SignInRedux} />
-          {/* <Route path="/signin" name="サインイン" exact component={SignIn} /> */}
-          <AuthCheck>
-              <Route path="/" name="ダッシュボード" exact component={loggedInPage} />
-          </AuthCheck>
-        </Switch>
-      </Router>
+  <StateProvider>
+    <Router>
+      <Switch>
+        <Route path="/signin" name="サインイン" exact component={SignInRedux} />
+        {/* <Route path="/signin" name="サインイン" exact component={SignIn} /> */}
+        <AuthCheck>
+            <Route path="/" name="ダッシュボード" exact component={loggedInPage} />
+        </AuthCheck>
+      </Switch>
+    </Router>
   </StateProvider>
   )
 }
