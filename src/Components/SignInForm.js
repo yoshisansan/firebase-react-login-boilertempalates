@@ -22,7 +22,7 @@ const Copyright = () => {
       {'.'}
     </Typography>
   );
-}
+};
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -44,7 +44,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const SignInForm = ({handleSignIn, handleOnChange, formdata}) => {
+const SignInForm = ({ handleSignIn, handleOnChange, formdata }) => {
   const classes = useStyles();
 
   return (
@@ -113,6 +113,6 @@ const SignInForm = ({handleSignIn, handleOnChange, formdata}) => {
       </Box>
     </Container>
   );
-}
+};
 
 export default SignInForm;

@@ -2,11 +2,10 @@
 import React, { useState, useContext } from 'react';
 import { useHistory } from 'react-router-dom';
 import SignInForm from './Components/SignInForm.js';
-import { FirebaseContext } from './FirebaseReducer/firebaseStore';
-import FirebaseInitialized from './FirebaseReducer/initialize';
+import { FirebaseContext } from './FirebaseClass';
 
-const SignInRedux = () => {
-  const { dispatch } = useContext(FirebaseContext);
+const SignInClass = () => {
+  const { user, firebaseInstance } = useContext(FirebaseContext);
   const history = useHistory();
   const [formdata, setFormdata] = useState({
     email: '',
@@ -16,23 +15,19 @@ const SignInRedux = () => {
   const handleSignIn = async (e) => {
     e.preventDefault();
     if (e.type !== 'click') return;
-
     try {
-      const auth = await FirebaseInitialized.auth().signInWithEmailAndPassword(
+      const auth = await firebaseInstance.emailLogin(
         formdata.email,
         formdata.password
       );
       if (auth.user) {
-        console.log('hello signin');
-        await dispatch({ type: 'login', payload: { user: auth.user } });
-        history.push('/');
-      } else {
-        console.log('error');
+        console.log('login!');
+        history.push("/");
       }
-    } catch (e) {
-      console.log(`failed : ${e}`);
+    } catch(e) {
+      console.log(`ERROR: ${e}`);
     }
-  };
+  }
 
   const handleOnChange = (e) => {
     e.preventDefault();
@@ -47,4 +42,4 @@ const SignInRedux = () => {
   );
 };
 
-export default SignInRedux;
+export default SignInClass;

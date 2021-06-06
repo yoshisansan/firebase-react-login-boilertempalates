@@ -22,7 +22,7 @@ const Copyright = () => {
       {'.'}
     </Typography>
   );
-}
+};
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -108,6 +108,6 @@ const SignInForm = () => {
       </Box>
     </Container>
   );
-}
+};
 
 export default SignInForm;
