@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-// import AppReducer from './appReducer';
-import AppClass from './appClass';
+import AppReducer from './LoginReducer/appReducer';
+// import AppClass from './LoginClass/appClass';
 
 ReactDOM.render(
-  // <AppReducer />
-  <AppClass />
+  <AppReducer />
+  // <AppClass />
 , document.getElementById('root'));

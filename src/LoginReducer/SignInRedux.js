@@ -1,7 +1,7 @@
 // 参考：https://qiita.com/reika_i/items/3e3186ea4f3882f9c90dより
 import React, { useState, useContext } from 'react';
 import { useHistory } from 'react-router-dom';
-import SignInForm from './Components/SignInForm.js';
+import SignInForm from '../Components/SignInForm.js';
 import { FirebaseContext } from './FirebaseReducer/firebaseStore';
 import FirebaseInitialized from './FirebaseReducer/initialize';
 

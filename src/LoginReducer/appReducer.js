@@ -1,5 +1,4 @@
 import React from 'react';
-import './index.css';
 import { StateProvider } from './FirebaseReducer/firebaseStore';
 import SignInRedux from './SignInRedux';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';

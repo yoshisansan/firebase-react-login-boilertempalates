@@ -1,6 +1,6 @@
 import  { useState, useEffect } from 'react';
-import config from '../config';
-import getFirebaseInstance from './';
+import config from '../../config';
+import getFirebaseInstance from '.';
 import firebase from 'firebase';
 
 const useAuth = () => {
